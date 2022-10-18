@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1 class="text-center">Registration Page</h1>
+            <div class="body">
+
+           
+
+                <form [formGroup]="form" (ngSubmit)="registerSubmit()">
+
+
+                    <div class="mb-3 mt-5">
+                        <label for="name" class="form-label">Firstname</label>
+                        <input type="name" class="form-control"  formControlName="fullname" >
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="text" class="form-label">Mobile number:</label>
+                        <input type="text" class="form-control"  formControlName="mobileno">
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">Email id</label>
+                        <input type="email" class="form-control"  formControlName="emailid" >
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Userrole</label>
+                        <select class="form-control form-select" id="exampleFormControlSelect1" formControlName="userrole">
+                            <option>Manufacturer</option>
+                            <option>Quality inspector</option>
+                            <option>Business analyst</option>
+                            <option>Consumer</option>
+
+                        </select>
+                    </div>
+                    <div class="mt-3 mb-3">
+
+
+
+                        <button type="submit" class="btn btn-primary float-end">Register</button>
+                    </div><br><br>
+
+                    <div class="mt-5 mb-3">
+                        <p>Already have a login<a [routerLink]="['/login']" routerLinkActive="router-link-active">
+                                ?Click here</a></p>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>

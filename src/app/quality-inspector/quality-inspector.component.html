@@ -1,0 +1,52 @@
+<h1 class="text-uppercase text-center bg-success">Venture Lighting private limited</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="body">
+                    <h2 class="text-uppercase text-danger mt-5">Quality section</h2>
+<!-- 
+                <div class="mt-5">
+                    <button type="button" class="btn btn-success btn-lg">View Inspection</button>
+
+                </div> -->
+
+                
+            <table class="table table-bordered mt-5 mb-3">
+                <thead>
+                    <tr>
+                        <th>Product Department</th>
+                        <th>Product Watts</th>
+                        <th>Types of Lamps</th>
+                        <th>Quantity</th>
+                        <th>Working Supervisor</th>
+                        <th>Option</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let products of inspectValueLocal">
+                        <td>{{products.department}}</td>
+                        <td>{{products.watts}}</td>
+                        <td>{{products.lamps}}</td>
+                        <td>{{products.quantity}}</td>
+                        <td>{{products.supervisor}}</td>
+                        <td>
+                            
+<button type="button" class="btn btn-primary" (click)="routerCheck()" [routerLink]="['/manufacturer',products.idproduct]" routerLinkActive="router-link-active"  *ngIf="products.status=='Not verified'" >View</button>
+  
+<button type="button" class="btn btn-success" *ngIf="products.status=='Verified'" >Verified</button>
+                            
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+            </div>
+
+        </div>
+    </div>
+</div>

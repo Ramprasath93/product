@@ -1,0 +1,40 @@
+<h1 class="text-uppercase text-center bg-success">Venture Lighting private limited</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="body">
+
+                <div class="mt-5 mb-3">
+                    <button type="button" class="btn btn-primary btn-lg" (click)="dataDeliver()">Delivered items</button>
+                </div>
+                <table class="table table-bordered mt-5 mb-3" *ngIf="isDelivered">
+                    <thead>
+                        <tr>
+                            <th>Product Department</th>
+                            <th>Product Watts</th>
+                            <th>Types of Lamps</th>
+                            <th>Quantity</th>
+                            <th>Working Supervisor</th>
+                            <th>Option</th>
+    
+    
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let delivery of deliveredData">
+                            <td>{{delivery.department}}</td>
+                            <td>{{delivery.watts}}</td>
+                            <td>{{delivery.lamps}}</td>
+                            <td>{{delivery.quantity}}</td>
+                            <td>{{delivery.supervisor}}</td>
+                            <td>
+                                <button typ='button' class="btn btn-danger btn-disabled">Product delivered</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

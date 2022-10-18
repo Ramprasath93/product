@@ -1,0 +1,40 @@
+<h1 class="text-uppercase text-center bg-success">Venture Lighting private limited</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <table class="table table-bordered mt-5 mb-3">
+                <thead>
+                    <tr>
+                        <th>Product Department</th>
+                        <th>Product Watts</th>
+                        <th>Types of Lamps</th>
+                        <th>Quantity</th>
+                        <th>Working Supervisor</th>
+                        <th>Option</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let product of getValue">
+                        <td>{{product. department}}</td>
+                        <td>{{product.watts}}</td>
+                        <td>{{product.lamps}}</td>
+                        <td>{{product.quantity}}</td>
+                        <td>{{product.supervisor}}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" (click)="demo()" [routerLink]="['/manufacturer',product.idproduct]" routerLinkActive="router-link-active" >Edit</button>
+                            <button type="submit" class="btn btn-danger" (click)="productDelete(product.idproduct)" >Delete</button>
+
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<h1 class="text-uppercase text-center bg-success">Venture Lighting private limited</h1>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="body">
+        <h3 class="text-center">Login section</h3>
+        <form [formGroup]="form" (ngSubmit)="loginSubmit()">
+
+          <!-- <div class="button mb-3">
+                        <button type="button" class="btn btn-success float-end" [routerLink]="['/register']" routerLinkActive="router-link-active" >Register</button>
+                    </div> -->
+          <div class="mb-3 mt-5">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"
+              formControlName="email">
+          </div>
+
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd"
+              formControlName="password">
+          </div>
+
+
+          <div class="btn-sec ">
+            <button type="submit" class="btn btn-primary mt-3 col-md-12">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

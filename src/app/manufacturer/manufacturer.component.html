@@ -1,0 +1,105 @@
+<h1 class="text-uppercase text-center bg-success">Venture Lighting private limited</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="body">
+
+                <h3 class="mt-5 mb-3 text-center">Lamp Manufacturing Section</h3>
+
+                <div class="btn btn-success mt-5">
+                    <button type="submit" class="btn btn-success float-end" [routerLink]="['/viewproduct']"
+                        routerLinkActive="router-link-active">View</button>
+
+                </div>
+
+                <!-- <div class="button-sec">
+                    <button type="button" class="btn btn-primary " (click)="hide()" >Add
+                        Product</button>
+
+                        <button type="button" class="btn btn-primary " >Edit
+                            Product</button>
+
+
+                        
+                </div> -->
+
+
+
+                <form [formGroup]="form" (ngSubmit)="productSubmit()">
+
+                    <div class="form-group mt-3 mb-3">
+                        <label for="exampleFormControlSelect1">Product Department</label>
+                        <select class="form-control form-select" id="exampleFormControlSelect1"
+                            formControlName="department">
+                            <option>Arctube</option>
+                            <option>Bulbformer</option>
+
+
+                        </select>
+                    </div>
+
+
+                    <div class="form-group mt-3 mb-3">
+                        <label for="exampleFormControlSelect1">Product Watts</label>
+                        <select class="form-control form-select" id="exampleFormControlSelect1" formControlName="watts">
+                            <option>250W</option>
+                            <option>400W</option>
+                            <option>1000W</option>
+
+
+                        </select>
+                    </div>
+
+                    <div class="form-group mt-3 mb-3">
+                        <label for="exampleFormControlSelect1">Types of Lamps</label>
+                        <select class="form-control form-select" id="exampleFormControlSelect1" formControlName="lamps">
+                            <option>Metal halide</option>
+                            <option>LED</option>
+
+
+                        </select>
+                    </div>
+
+                    <div class="form-group mt-3 mb-3">
+                        <label for="number">Quantity</label>
+                        <input type="number" class="form-control" id="number" formControlName="quantity">
+                    </div>
+
+                    <div class="form-group mt-3 mb-3">
+                        <label for="exampleFormControlSelect1">Working supervisor</label>
+                        <select class="form-control form-select" id="exampleFormControlSelect1"
+                            formControlName="supervisor">
+                            <option>Sakthivel</option>
+                            <option>Mahalingam</option>
+
+
+
+                        </select>
+                    </div>
+                    <div class="mt-3 mb-3">
+                        <button type="submit" class="btn btn-primary float-end" *ngIf="service.isAddProduct">Add product</button>
+                    </div><br>
+
+                    <div class="mt-3 mb-3">
+                        <button type="button" class="btn btn-primary float-end " (click)="productUpdate()" *ngIf="service.isUpdate">Update</button>
+
+                    </div>
+
+                    <div class="mt-3 mb-3">
+                        <button type="button" class="btn btn-primary float-end " *ngIf="service.isInspected"  (click)="verfiedProduct(form.value)" >Inspected</button>
+
+                    </div>
+
+                   
+
+
+
+                </form>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
